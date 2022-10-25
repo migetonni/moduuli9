@@ -11,14 +11,17 @@ class Car:
               f"matkamittari {self.odometer}"
               f" nopeus {self.speed}")
 
-    def accelerate(self):
-        self.speed =self.speed +3
-
+    def accelerate(self, speed_change):
+        if 0 < self.speed + speed_change < self.max_speed:
+            self.speed = self.speed + speed_change
 
 
 someCar = Car("ABC-123", 142)
 
-someCar.accelerate()
-someCar.accelerate()
+someCar.accelerate(30)
+someCar.accelerate(70)
+someCar.accelerate(50)
 
+someCar.print_info()
+someCar.accelerate(-200)
 someCar.print_info()
