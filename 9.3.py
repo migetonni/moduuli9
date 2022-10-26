@@ -18,7 +18,7 @@ class Car:
 
     def kulje(self, hours):
         if self.odometer > -1:
-            self.odometer = self.speed * hours
+            self.odometer = self.speed * hours + self.odometer
 
 
 
