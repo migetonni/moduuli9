@@ -25,7 +25,7 @@ class Car:
 
 cars = []
 for i in range(10):
-    car = Car("ABC-" + str(i + 1), random.randint(100, 200), )
+    car = Car("ABC-" + str(i + 1), random.randint(100, 200))
     cars.append(car)
 
 
@@ -42,7 +42,11 @@ while race_over == False:
         if car.odometer >= 10000:
             race_over = True
 
-for Car in cars:
-    print(Car.print_info())
 
+for car in cars:
+    print(car.print_info())
+
+for car in cars:
+    if car.odometer >= 10000:
+        print(f" Voittaja on {car.register_number}")
 
